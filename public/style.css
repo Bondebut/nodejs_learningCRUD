@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    background: #222;
+    padding: 20px;
+    li {
+        margin-left: 20px;
+        
+        a{
+            color: #fff;
+        }
+    }
+}

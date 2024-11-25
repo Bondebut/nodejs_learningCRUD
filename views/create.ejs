@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Product</title>
+</head>
+<body>
+    <h1>Create new Product</h1>
+    <form action="/create" method="post" enctype="multipart/form-data">
+        <div class="name">
+            <label for="name"></label>
+            <input type="text" name="name" required placeholder="Enter product name">
+        </div>
+        <div class="description">
+            <label for="description"></label>
+            <textarea  name="description" required placeholder="Enter product description"></textarea>
+        </div>
+        <div class="image">
+            <label for="image"></label>
+            <input type="file" name="image" >
+        </div>
+        
+        <button type="submit">create</button>
+    </form>
+</body>
+</html>

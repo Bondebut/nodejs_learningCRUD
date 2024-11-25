@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit Product</title>
+</head>
+<body>
+    <h1>edit new Product</h1>
+    <form action="/edit/<%= product.id %>" method="post" enctype="multipart/form-data">
+        <div class="name">
+            <label for="name"></label>
+            <input type="text" name="name" value="<%= product.name %>" required placeholder="Enter product name">
+        </div>
+        <div class="description">
+            <label for="description"></label>
+            <textarea  name="description" required placeholder="Enter product description">
+                <%= product.description %>
+            </textarea>
+        </div>
+        <div class="image">
+            <label for="image"></label>
+            <% if (product.image) { %>
+                <img src="/uploads/<%= product.image %>" width="100">
+                <input type="hidden" name="oldImage" value="<%= product.image %>">
+            <% } %>
+            <input type="file" name="image" >
+        </div>
+        
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
